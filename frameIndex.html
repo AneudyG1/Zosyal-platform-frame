@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Zosyal - Platform Frame</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  
+  <!-- Notification Toast -->
+  <div class="notification-toast" id="notificationToast">
+    <span class="notification-icon">✅</span>
+    <span id="notificationText">Notification message</span>
+  </div>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="logo-section">
+      <img src="sozyal.png" alt="Zosyal" class="logo_picture" onerror="this.style.display='none'">
+      <div>
+        <div class="logo_name">
+          <span>Z</span><span>O</span><span>S</span><span>Y</span><span>E</span><span>L</span>
+        </div>
+        <div class="daystat">
+          <div class="daystat-item">Berlin</div>
+          <div class="daystat-item" id="currentDay">Sunday</div>
+          <div class="daystat-item">20°C ☀️</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-voice-section">
+      <button class="nav-button" onclick="toggleMessages()">🔔</button>
+    </div>
+  </div>
+
+  <!-- Message Box -->
+  <div class="message-box" id="messageBox">
+    <div class="message-header">
+      <h3>💬 Messages</h3>
+      <button class="close-btn" onclick="toggleMessages()">×</button>
+    </div>
+    <div class="message-list">
+      <div class="message-item">
+        <img class="message-avatar" src="https://i.pravatar.cc/50?img=1" alt="User">
+        <div class="message-content">
+          <div class="message-name">Emma Davis</div>
+          <div class="message-text">Hey! How are you doing?</div>
+        </div>
+      </div>
+      <div class="message-item">
+        <img class="message-avatar" src="https://i.pravatar.cc/50?img=5" alt="User">
+        <div class="message-content">
+          <div class="message-name">David Brown</div>
+          <div class="message-text">Meeting at 3pm today?</div>
+        </div>
+      </div>
+      <div class="message-item">
+        <img class="message-avatar" src="https://i.pravatar.cc/50?img=6" alt="User">
+        <div class="message-content">
+          <div class="message-name">Lisa Zhang</div>
+          <div class="message-text">Thanks for the help! 🙏</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-wrapper">
+    <div class="main-content">
+      <!-- Page content goes here -->
+      <div class="content-placeholder">
+        <h2>📄 Page Content Area</h2>
+        <p>This is where your page-specific content will be displayed.</p>
+        <p>The frame includes the header, bottom navigation, and all modals.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <button class="nav-button" onclick="toggleSidePanel()">📄</button>
+    <button class="nav-button" onclick="openSearchModal()">🔍</button>
+    <button class="nav-button" onclick="openShareModal()">➕</button>
+    <button class="nav-button" onclick="openAIModal()">🤖</button>
+    <button class="nav-button" onclick="toggleSettings()">⚙️</button>
+  </div>
+
+  <!-- Side Panel -->
+  <div class="side-panel" id="sidePanel">
+    <button class="close-panel" onclick="toggleSidePanel()">×</button>
+    <div class="panel-header">📱 Navigation Panel</div>
+    <div class="panel-content">
+      <p>This is the left side panel for navigation and page management.</p>
+    </div>
+  </div>
+
+  <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button class="close-panel" onclick="toggleSettings()">×</button>
+    <div class="panel-header">⚙️ Settings</div>
+    <div class="panel-content">
+      <p>This is the right side panel for settings and preferences.</p>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('searchModal')">×</button>
+      <h2>🔍 Search</h2>
+      <p style="color: rgba(255, 255, 255, 0.8); text-align: center;">Search functionality</p>
+    </div>
+  </div>
+
+  <!-- Share Modal -->
+  <div class="modal-overlay" id="shareModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('shareModal')">×</button>
+      <h2>➕ Share Options</h2>
+      <p style="color: rgba(255, 255, 255, 0.8); text-align: center;">Share content options</p>
+    </div>
+  </div>
+
+  <!-- AI Helper Modal -->
+  <div class="modal-overlay" id="aiModal">
+    <div class="modal-content ai-assistant-modal">
+      <button class="close-modal" onclick="closeModal('aiModal')">×</button>
+      <h2>🤖 AI Assistant</h2>
+      <div class="ai-suggestion">💡 Complete your profile</div>
+      <div class="ai-suggestion">📊 View analytics</div>
+      <div class="ai-suggestion">🎯 Set goals</div>
+      <div class="ai-suggestion">✨ Get personalized tips</div>
+    </div>
+  </div>
