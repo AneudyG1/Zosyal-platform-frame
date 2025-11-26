@@ -24,18 +24,25 @@
     <span id="notificationText">Notification message</span>
   </div>
 
-  <!-- Top Header -->
+ <!-- Top Header -->
   <div class="top-header">
     <div class="logo-section">
-
-      <!-- Corrected logo image + fallback -->
-      <img src="./zosyalLogo.png.jpeg" alt="Zosyal" class="logo_picture">
-
+      <img src="./logopic.jpeg" alt="Zosyal" class="logo_picture" onerror="this.style.display='none'">
       <div>
-        <!-- Fixed spelling: ZOSYAL -->
         <div class="logo_name">
-          <span>Z</span><span>O</span><span>S</span><span>Y</span><span>A</span><span>L</span>
+          <span>Z</span><span>O</span><span>S</span><span>Y</span><span>E</span><span>L</span>
         </div>
+        <div class="daystat">
+          <div class="daystat-item">Berlin</div>
+          <div class="daystat-item" id="currentDay">Sunday</div>
+          <div class="daystat-item">20°C ☀️</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-voice-section">
+      <button class="nav-button" onclick="toggleMessages()">🔔</button>
+    </div>
+  </div>
 
         <div class="daystat">
           <div class="daystat-item">Berlin</div>
