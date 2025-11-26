@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Zosyal - Platform Frame</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./frameStyle.css">
-  <script src="./frameScript.js"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="frameStyle.css">
+
 </head>
 <body>
+
   <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
-  
+
   <!-- Notification Toast -->
   <div class="notification-toast" id="notificationToast">
     <span class="notification-icon">✅</span>
@@ -20,11 +27,17 @@
   <!-- Top Header -->
   <div class="top-header">
     <div class="logo-section">
-      <img src="sozyalLogo.png.jpeg" alt="Zosyal" class="logo_picture" onerror="this.style.display='none'">
+
+      <!-- Corrected logo image + fallback -->
+      <img src="sozyalLogo.png.jpeg" alt="Zosyal" class="logo_picture"
+           onerror="this.style.display='none'">
+
       <div>
+        <!-- Fixed spelling: ZOSYAL -->
         <div class="logo_name">
-          <span>Z</span><span>O</span><span>S</span><span>Y</span><span>E</span><span>L</span>
+          <span>Z</span><span>O</span><span>S</span><span>Y</span><span>A</span><span>L</span>
         </div>
+
         <div class="daystat">
           <div class="daystat-item">Berlin</div>
           <div class="daystat-item" id="currentDay">Sunday</div>
@@ -32,6 +45,7 @@
         </div>
       </div>
     </div>
+
     <div class="search-voice-section">
       <button class="nav-button" onclick="toggleMessages()">🔔</button>
     </div>
@@ -44,6 +58,7 @@
       <button class="close-btn" onclick="toggleMessages()">×</button>
     </div>
     <div class="message-list">
+
       <div class="message-item">
         <img class="message-avatar" src="https://i.pravatar.cc/50?img=1" alt="User">
         <div class="message-content">
@@ -51,6 +66,7 @@
           <div class="message-text">Hey! How are you doing?</div>
         </div>
       </div>
+
       <div class="message-item">
         <img class="message-avatar" src="https://i.pravatar.cc/50?img=5" alt="User">
         <div class="message-content">
@@ -58,6 +74,7 @@
           <div class="message-text">Meeting at 3pm today?</div>
         </div>
       </div>
+
       <div class="message-item">
         <img class="message-avatar" src="https://i.pravatar.cc/50?img=6" alt="User">
         <div class="message-content">
@@ -65,12 +82,13 @@
           <div class="message-text">Thanks for the help! 🙏</div>
         </div>
       </div>
+
     </div>
   </div>
 
+  <!-- Main Wrapper -->
   <div class="main-wrapper">
     <div class="main-content">
-      <!-- Page content goes here -->
       <div class="content-placeholder">
         <h2>📄 Page Content Area</h2>
         <p>This is where your page-specific content will be displayed.</p>
@@ -111,7 +129,7 @@
     <div class="modal-content">
       <button class="close-modal" onclick="closeModal('searchModal')">×</button>
       <h2>🔍 Search</h2>
-      <p style="color: rgba(255, 255, 255, 0.8); text-align: center;">Search functionality</p>
+      <p class="modal-sub-text">Search functionality</p>
     </div>
   </div>
 
@@ -120,11 +138,11 @@
     <div class="modal-content">
       <button class="close-modal" onclick="closeModal('shareModal')">×</button>
       <h2>➕ Share Options</h2>
-      <p style="color: rgba(255, 255, 255, 0.8); text-align: center;">Share content options</p>
+      <p class="modal-sub-text">Share content options</p>
     </div>
   </div>
 
-  <!-- AI Helper Modal -->
+  <!-- AI Modal -->
   <div class="modal-overlay" id="aiModal">
     <div class="modal-content ai-assistant-modal">
       <button class="close-modal" onclick="closeModal('aiModal')">×</button>
@@ -135,3 +153,8 @@
       <div class="ai-suggestion">✨ Get personalized tips</div>
     </div>
   </div>
+
+  <!-- Load JS at bottom for performance -->
+  <script src="frameScript.js"></script>
+</body>
+</html>
